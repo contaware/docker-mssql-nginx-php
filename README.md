@@ -53,9 +53,9 @@ The installed PHP version along the extensions can be configured in *./Dockerfil
 
 ### Database Server
 
-MSSQL is configured to listen on port **1433**. Access the server with the **mssqldb** hostname, see *./html/index.php* for an example. The database is stored under *./mssqldb_data/*.
+MSSQL is configured to listen on port **1433**. Access the server with the **mssqldb** hostname, see *./html/index.php* for an example. The databases are stored under *./mssqldb_data/*.
 
-The **sa** user has the **123456Ms** password. Server version, port and password can be changed in *./compose.yaml*. But note that in some cases it may be necessary to start with no database, for that delete the *./mssqldb_data/* directory.
+The **sa** user has the **123456Ms** password. Server version, port and password can be changed in *./compose.yaml*. But note that in some cases it may be necessary to start with no databases, for that delete the *./mssqldb_data/* directory.
 
 ### sqlcmd
 
