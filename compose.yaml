@@ -12,7 +12,7 @@ services:
   nginx:
     image: nginx:1.29                  # set the nginx version you need for your project
     ports:
-      - "8000:80"                      # map your computer port to the container port
+      - "8008:80"                      # map your computer port to the container port
     depends_on:
       - php
     volumes:

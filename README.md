@@ -45,7 +45,7 @@ Enter the project directory: `cd docker-mssql-nginx-php/`
 
 ### Web Server and PHP
 
-The Nginx server is listening on <http://localhost:8000>. Change the port in *./compose.yaml* file.
+The Nginx server is listening on <http://localhost:8008>. Change the port in *./compose.yaml* file.
 
 Place your web project files into *./html/* directory.
 
