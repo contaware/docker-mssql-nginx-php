@@ -28,7 +28,8 @@
     echo "<h2>Information</h2>\n";
     echo "<pre>\n";
     echo "PHP Version:        " . phpversion() . "\n";
-    echo "IP of php:          " . gethostbyname("php") . "\n";
+    echo "IP of php:          " . gethostbyname(gethostname()) . "\n";
+    echo "Id of php:          " . exec("id") . "\n";
     echo "IP of nginx:        " . gethostbyname("nginx") . "\n";
     echo "IP of mssqldb:      " . gethostbyname("mssqldb") . "\n";
     echo "Int range and size: " . PHP_INT_MIN . " to " . PHP_INT_MAX . " (" . PHP_INT_SIZE . " bytes)" . "\n";
