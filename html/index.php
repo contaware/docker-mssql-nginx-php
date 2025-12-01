@@ -6,6 +6,7 @@
         {
             $conn = new PDO("sqlsrv:Server=$servername;Database=$dbname;TrustServerCertificate=true", $username, $password);
             echo "Connected successfully (with PDO)<br>\n";
+            echo "Server version: " . $conn->getAttribute(PDO::ATTR_SERVER_VERSION) . "<br>\n";
             $conn = null; // close connection
         }
         catch (Throwable $e)
