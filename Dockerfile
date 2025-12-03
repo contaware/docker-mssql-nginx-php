@@ -9,8 +9,8 @@ rm packages-microsoft-prod.deb
 
 # Set the php extensions you need for your project
 RUN apt update && \
-    ACCEPT_EULA=Y apt install -y libfreetype-dev libjpeg62-turbo-dev libpng-dev libzip-dev zip unixodbc-dev msodbcsql18 && \
+    ACCEPT_EULA=Y apt install -y libfreetype-dev libjpeg62-turbo-dev libwebp-dev libpng-dev libzip-dev zip unixodbc-dev msodbcsql18 && \
     pecl install xdebug sqlsrv pdo_sqlsrv && \
-    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && \
     docker-php-ext-install mysqli pdo pdo_mysql gd exif zip && \
     docker-php-ext-enable xdebug sqlsrv pdo_sqlsrv
