@@ -4,7 +4,8 @@
         echo "<h2>Test the connection to $servername</h2>\n";
         try
         {
-            $conn = new PDO("sqlsrv:Server=$servername;Database=$dbname;TrustServerCertificate=true", $username, $password);
+            $conn = new PDO("sqlsrv:Server=$servername;Database=$dbname;TrustServerCertificate=true", 
+                $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
             echo "Connected successfully (with PDO)<br>\n";
             echo "Server version: " . $conn->getAttribute(PDO::ATTR_SERVER_VERSION) . "<br>\n";
             $conn = null; // close connection
