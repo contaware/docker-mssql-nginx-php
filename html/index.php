@@ -27,6 +27,7 @@
 <h1>Docker MSSQL NGINX PHP</h1>
 <?php
     // Information
+    date_default_timezone_set('UTC');
     echo "<h2>Information</h2>\n";
     echo "<pre>\n";
     echo "PHP Version:        " . phpversion() . "\n";
@@ -34,8 +35,8 @@
     echo "Id of php:          " . exec("id") . "\n";
     echo "IP of nginx:        " . gethostbyname("nginx") . "\n";
     echo "IP of mssqldb:      " . gethostbyname("mssqldb") . "\n";
-    echo "Int range and size: " . PHP_INT_MIN . " to " . PHP_INT_MAX . " (" . PHP_INT_SIZE . " bytes)" . "\n";
-    echo "Year 2038 check:    " . (date("y", strtotime("2039-01-01")) == 39 ? "OK no bug" : "bug present!") . "\n";
+    echo "Int size:           " . PHP_INT_SIZE . " bytes" . "\n";
+    echo "Year 2038 check:    " . (date("y", @strtotime("2039-01-01")) == 39 ? "OK no bug" : "bug present!") . "\n";
     echo "</pre>\n";
 
     // Test DB connection
